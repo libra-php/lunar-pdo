@@ -1,0 +1,1 @@
+{"version":1,"defects":{"DBTest::testOne":8,"DBTest::testColumn":8,"DBTest::testVar":7},"times":{"DBTest::testOne":0.005,"DBTest::testRun":0.001,"DBTest::testQuery":0.001,"DBTest::testFetch":0.001,"DBTest::testFetchAll":0.001,"DBTest::testColumn":0.01,"DBTest::testVar":0.002,"DBTest::testValue":0.001}}
