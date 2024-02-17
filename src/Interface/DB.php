@@ -11,7 +11,7 @@ interface DB
 	public function disconnect(): bool;
 	public function run(string $sql, array $args = []): bool|PDOStatement;
 	public function query(string $sql, ...$args): bool|PDOStatement;
-	public function fetch(string $sql, ...$args): ?stdClass;
+	public function fetch(string $sql, ...$args): bool|stdClass;
 	public function fetchAll(string $sql, ...$args): array|bool;
 	public function value(string $sql, ...$args): mixed;
 	public function column(string $sql, ...$args): array|bool;

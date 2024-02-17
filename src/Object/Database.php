@@ -51,16 +51,16 @@ class Database implements DB
         return count($args) > 0 ? $this->run($sql, $args) : $this->run($sql);
     }
 
-    public function fetch(string $sql, ...$args): ?stdClass
+    public function fetch(string $sql, ...$args): bool|stdClass
     {
         $stmt = $this->run($sql, $args);
-        return $stmt ? $stmt->fetchObject() : null;
+        return $stmt ? $stmt->fetchObject() : false;
     }
 
     public function fetchAll(string $sql, ...$args): array|bool
     {
         $stmt = $this->run($sql, $args);
-        return $stmt ? $stmt->fetchAll(PDO::FETCH_OBJ) : null;
+        return $stmt ? $stmt->fetchAll(PDO::FETCH_OBJ) : false;
     }
 
     public function value(string $sql, ...$args): mixed
