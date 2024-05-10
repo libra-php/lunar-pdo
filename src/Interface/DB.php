@@ -15,4 +15,10 @@ interface DB
 	public function fetchAll(string $sql, ...$args): array|bool;
 	public function value(string $sql, ...$args): mixed;
 	public function column(string $sql, ...$args): array|bool;
+	public function lastInsertId(?string $name = null): string|false;
+	public function inTransaction(): bool;
+	public function beginTransaction(): bool;
+	public function commit(): bool;
+	public function rollBack(): bool;
+	public function errorCode(): ?string;
 }
