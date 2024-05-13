@@ -63,7 +63,7 @@ class Database implements DB
         return $stmt ? $stmt->fetchAll(PDO::FETCH_OBJ) : false;
     }
 
-    public function value(string $sql, ...$args): mixed
+    public function var(string $sql, ...$args): mixed
     {
         $stmt = $this->run($sql, $args);
         return $stmt->fetchColumn();

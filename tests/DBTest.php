@@ -42,9 +42,9 @@ final class DBTest extends TestCase
 		$this->assertSame($results[2]->name, "three");
 	}
 
-	public function testValue(): void
+	public function testVar(): void
 	{
-		$result = $this->db->value("SELECT name FROM fake WHERE value = ?", 3);
+		$result = $this->db->var("SELECT name FROM fake WHERE value = ?", 3);
 		$this->assertSame($result, "three");
 	}
 

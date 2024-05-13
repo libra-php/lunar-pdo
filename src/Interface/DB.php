@@ -13,7 +13,7 @@ interface DB
 	public function query(string $sql, ...$args): bool|PDOStatement;
 	public function fetch(string $sql, ...$args): bool|stdClass;
 	public function fetchAll(string $sql, ...$args): array|bool;
-	public function value(string $sql, ...$args): mixed;
+	public function var(string $sql, ...$args): mixed;
 	public function column(string $sql, ...$args): array|bool;
 	public function lastInsertId(?string $name = null): string|false;
 	public function inTransaction(): bool;
